@@ -53,6 +53,11 @@ module Manservant
       erb :page, :layout => :layout
     end
 
+    post '/search' do
+      @page = params[:page]
+      redirect to(@page)
+    end
+
     #
     # Handlers
     #
