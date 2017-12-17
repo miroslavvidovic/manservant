@@ -4,14 +4,20 @@ Browse man pages in style with your personal manservant.
 
 Fed up with browsing manual pages in a console using `less` or Googling for
 the man page only to realize that your local install differs from the man page
-you found? Me too, so last night I hacked together manservant to serve up
+you found? Me too, so last night I forked the original [Manservant](https://github.com/jimeh/manservant), fixed some issues and improved it to serve up
 local man pages over HTTP with some pretty UI sprinkled over it.
 
-Here's [tmux][]'s man page served to you by manservant:
+Here's vim man page served to you by manservant:
 
-![preview](http://f.cl.ly/items/1Y3i1Y2T463k3L291w3o/manservant.png)
+![preview](https://imgur.com/bCvNdqe.png)
 
-[tmux]: http://tmux.sourceforge.net/
+## Improvements
+
+The original Manservant isn't maintained any more and the last update was over 5 years ago. This version tries to make Manservant more usable by fixing some issues, adding new functionality and by improving the UI.
+
+- Manservant now works under Linux (tested on Ubuntu)
+- There is an option to search for man pages from the web interface
+- Sidebar has its own scroll bar (useful for man pages with many sections, e.g., bash)
 
 ## Requirements
 
@@ -55,20 +61,16 @@ Then visit [http://localhost:9292/](http://localhost:9292/) in your browser.
 
 ## Credits
 
+- Original version of [Manservant][] by [jimeh][],
 - Man page to HTML conversion is done by [man2html][], which is bundled into
   manservant.
 - The HTML UI style is shamelessly ripped from the [ronn][] gem's HTML output
   format.
 
+[jimeh]: https://github.com/jimeh
+[manservant]: https://github.com/jimeh/manservant
 [man2html]: http://dcssrv1.oit.uci.edu/indiv/ehood/man2html.html
 [ronn]: http://rtomayko.github.com/ronn/ronn.1.html
-
-## Todo
-
-- Less shitty code.
-- Caching of rendered man pages.
-- Write some tests.
-- Search.
 
 ## Contributing
 
@@ -80,7 +82,7 @@ Then visit [http://localhost:9292/](http://localhost:9292/) in your browser.
 
 ## License
 
-Copyright (c) 2012 Jim Myhrberg
+Copyright (c) 2017 Miroslav Vidovic
 
 MIT License
 
