@@ -1,57 +1,96 @@
-.man-content,
-.man-content pre,
-.man-navigation,
-.man-navigation a,
-.man-error,
-.man-error p {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+body {
+    background: #fafafa;
 }
 
-.man-content h2 {
-  font-size: 15px;
-  line-height: 18px;
+pre {
+    border: 0; 
+    background-color: transparent;
+    font-size: 15px;
+    padding-left: 50px;
 }
-.man-content pre {
-  margin: 4ex 4ex;
+
+h2 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
 }
 
 .man-error {
-  width: 560px;
-  height: 230px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: -115px 0 0 -280px;
+  width: calc(100% - 350px);
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  top: 35%;
   text-align: center;
 }
+
 .man-error p {
   font-size: 15px;
   font-weight: bold;
 }
 
-.man-navigation {
-  display: block !important;
-  position: fixed;
-  top: 0;
-  left: 70%;
-  bottom: 0;
-  width: 100%;
-  padding: 38px 0 20px 14px;
-  border-left: 1px solid #dbdbdb;
-  background: #eee;
-  overflow: auto;
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
 }
-.man-navigation a,
-.man-navigation a:hover,
-.man-navigation a:link,
-.man-navigation a:visited {
-  display: block;
-  margin: 0;
-  padding: 5px 2px 5px 16px;
-  color: #999;
-  text-decoration: none;
+
+#sidebar {
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
 }
-.man-navigation a:hover {
-  color: #111;
-  text-decoration: underline;
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+    text-align: center;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+#content {
+    width: calc(100% - 350px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
